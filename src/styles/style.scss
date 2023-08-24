@@ -260,8 +260,9 @@ body {
           border-radius: 10px;
           padding-left: 60px;
           font-size: 1rem;
+          outline: none;
           &:focus {
-            outline: 1px solid #4e449a3e;
+            outline: 1px solid #8b82ce22;
           }
         }
 
@@ -278,6 +279,7 @@ body {
 
       .selectBar {
         position: relative;
+
         select {
           width: 110px;
           height: 60px;
@@ -286,7 +288,8 @@ body {
           background-color: inherit;
           padding: 0 1rem;
           font-size: 1rem;
-
+          cursor: pointer;
+          outline: none;
           /* Hide the default arrow */
           appearance: none;
           -webkit-appearance: none;
@@ -306,9 +309,9 @@ body {
             background-position: 200px 25px;
           }
 
-          &:focus {
-            outline: 1px solid #4e449a3e;
-          }
+          // &:focus {
+          //   outline: 1px solid #4e449a3e;
+          // }
         }
       }
     }
@@ -316,7 +319,7 @@ body {
     .top-cards-container {
       display: flex;
       overflow-x: scroll;
-      padding-bottom: 2.5rem;
+      padding-bottom: 2rem;
       gap: 1.5rem;
 
       &::-webkit-scrollbar {
@@ -330,13 +333,12 @@ body {
       .top-card {
         flex-shrink: 0;
         width: 250px !important;
-        // margin-right: 1.2rem;
-        padding: 1.2rem;
+        cursor: pointer;
+        padding: 1rem;
         border-radius: 10px;
 
         .top-card-header {
           display: flex;
-
           justify-content: space-between;
           img {
             width: 35px;
@@ -345,14 +347,16 @@ body {
           .fa-ellipsis-vertical {
             color: #4e449a;
             font-size: 1.5rem;
+
+            padding: 0 8px 0 8px;
             cursor: pointer;
           }
         }
 
         h3 {
           color: #4e449a;
-          margin-top: 1rem;
-          font-size: 1.1rem;
+          margin-top: 0.2rem;
+          font-size: 1rem;
         }
 
         .top-card-bottom {
@@ -390,13 +394,14 @@ body {
     .quick-access-root {
       h1 {
         color: #4e449a;
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.7rem;
       }
 
       .quick-access-card-container {
         display: grid;
         grid-template-columns: 1fr;
+        gap: 1rem;
 
         @media screen and (min-width: $breakpoint-small) {
           grid-template-columns: 1fr 1fr;
@@ -407,6 +412,8 @@ body {
       }
 
       .quick-access-card {
+        cursor: pointer;
+
         .img-container {
           height: 130px;
           overflow: hidden;
@@ -419,7 +426,10 @@ body {
           }
 
           @media screen and (min-width: $breakpoint-2xLarge) {
-            height: 150px;
+            height: 100px;
+          }
+          @media screen and (min-width: $breakpoint-3xLarge) {
+            height: 120px;
           }
 
           img {
@@ -441,12 +451,191 @@ body {
             color: #269e4a;
           }
 
+          .videoIcon {
+            color: #f84d73;
+          }
+
+          .pdfIcon {
+            color: #4e449a;
+          }
+
           h5 {
             font-size: 0.8rem;
             color: rgba(0, 0, 0, 0.89);
             span {
               color: rgba(0, 0, 0, 0.393);
             }
+          }
+        }
+      }
+    }
+
+    .middle-bottom {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+
+      @media screen and (min-width: $breakpoint-2xLarge) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .middle-bottom-left {
+        h1 {
+          color: #4e449a;
+          font-size: 1.2rem;
+          margin-bottom: 0.7rem;
+        }
+
+        .container {
+          display: grid;
+          grid-template-columns: 1fr 6fr 3fr;
+          gap: 1rem;
+          margin-bottom: 0.7rem;
+          cursor: pointer;
+          border-radius: 10px;
+
+          &:hover {
+            background-color: rgba(214, 214, 214, 0.184);
+          }
+
+          .image {
+            display: flex;
+            align-items: center;
+            img {
+              width: 100%;
+            }
+          }
+
+          .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h4 {
+              color: #38326bd9;
+              font-size: 0.9rem;
+            }
+            small {
+              font-size: 0.7rem;
+              font-weight: bold;
+              opacity: 0.6;
+            }
+          }
+
+          .last-info {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 1rem;
+
+            @media screen and (min-width: $breakpoint-2xLarge) {
+              justify-content: center;
+              padding-right: 0;
+            }
+
+            p {
+              font-size: 0.8rem;
+              color: #4e449a;
+              font-weight: bold;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+
+      .middle-bottom-right {
+        .top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h1 {
+            color: #4e449a;
+            font-size: 1.2rem;
+            margin-bottom: 0.7rem;
+          }
+          h2 {
+            color: #4e449a;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0 1rem;
+          }
+        }
+
+        .container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 1rem;
+          row-gap: 1rem;
+
+          @media screen and (min-width: $breakpoint-small) {
+            column-gap: 1.5rem;
+            row-gap: 1.5rem;
+          }
+
+          .card {
+            background-color: #ebedfa;
+            padding: 1rem 1.3rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.1s;
+
+            @media screen and (min-width: $breakpoint-small) {
+              padding: 1rem 1rem;
+            }
+
+            &:hover {
+              background-color: #ebedfaa2;
+            }
+
+            h4 {
+              color: #4e449a;
+              font-size: 1.3rem;
+            }
+
+            h3 {
+              color: rgba(0, 0, 0, 0.748);
+              font-size: 0.7rem;
+              margin-top: 0.3rem;
+              font-weight: bold;
+
+              @media screen and (min-width: 380px) {
+                font-size: 0.8rem;
+              }
+
+              @media screen and (min-width: $breakpoint-small) {
+                font-size: 1rem;
+              }
+            }
+            small {
+              opacity: 0.7;
+              font-size: 0.5rem;
+
+              @media screen and (min-width: 370px) {
+                font-size: 0.7rem;
+              }
+            }
+          }
+        }
+
+        .openFileButton {
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+
+          @media screen and (min-width: $breakpoint-2xLarge) {
+            margin-bottom: 0;
+          }
+
+          button {
+            background-color: #dee1e6c2;
+            width: 100%;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            color: #4e449af2;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
           }
         }
       }
