@@ -37,3 +37,53 @@ const adjustWidth = () => {
 adjustWidth();
 
 window.addEventListener("resize", adjustWidth);
+
+// chart
+const ctx = document.getElementById("myChart");
+
+new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN"],
+
+    datasets: [
+      {
+        label: "First value",
+        data: [3, 13, 16, 17, 16, 13],
+        borderWidth: 0,
+        borderRadius: 5,
+        backgroundColor: "#50469D",
+      },
+      {
+        label: "Second Value",
+        data: [10, 18, 22, 13, 11, 7],
+        borderWidth: 0,
+        borderRadius: 5,
+        backgroundColor: "#55e5fc",
+      },
+    ],
+  },
+  options: {
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        beginAtZero: true,
+        grid: {
+          display: false,
+        },
+        ticks: {
+          stepSize: 5,
+          min: 0,
+          max: 25,
+          callback: function (value) {
+            return value + "k";
+          },
+        },
+      },
+    },
+  },
+});

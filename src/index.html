@@ -411,8 +411,11 @@
           <button><i class="fa-solid fa-bars-staggered"></i></button>
         </div>
       </div>
-      <div>
-        usage stats graph
+
+      <!-- chart -->
+      <div class="chart">
+        <h1>Usage Stats</h1>
+        <canvas id="myChart"></canvas>
       </div>
       <div class="shared-folder">
         <h1>Shared Folders</h1>
@@ -489,6 +492,7 @@
 
   <script type="module" src="./js/main.js"></script>
   <script type="module" src="./js/injectImage.js">  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>
