@@ -6,6 +6,7 @@ $breakpoint-medium: 768px;
 $breakpoint-large: 992px;
 $breakpoint-xLarge: 1200px;
 $breakpoint-2xLarge: 1440px;
+$breakpoint-3xLarge: 1600px;
 
 * {
   margin: 0;
@@ -21,15 +22,22 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 
   @media screen and (min-width: $breakpoint-small) {
-    grid-template-columns: 7fr 3fr;
+    padding: 0 1.5rem;
+  }
+  @media screen and (min-width: $breakpoint-medium) {
+    grid-template-columns: 6fr 4fr;
   }
 
   @media screen and (min-width: $breakpoint-large) {
-    grid-template-columns: 220px 7fr 3fr;
+    grid-template-columns: 220px 5fr 5fr;
   }
+  @media screen and (min-width: $breakpoint-xLarge) {
+    grid-template-columns: 220px 5fr 5fr;
+  }
+
   @media screen and (min-width: $breakpoint-2xLarge) {
     grid-template-columns: 220px 7fr 3fr;
   }
@@ -242,7 +250,7 @@ body {
         position: relative;
 
         @media screen and (min-width: $breakpoint-large) {
-          width: 60%;
+          width: 65%;
         }
 
         input {
@@ -294,8 +302,8 @@ body {
             background-position: 120px 25px;
           }
           @media screen and (min-width: $breakpoint-xLarge) {
-            width: 200px;
-            background-position: 170px 25px;
+            width: 230px;
+            background-position: 200px 25px;
           }
 
           &:focus {
