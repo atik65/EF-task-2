@@ -316,7 +316,7 @@ body {
     .top-cards-container {
       display: flex;
       overflow-x: scroll;
-      padding-bottom: 3rem;
+      padding-bottom: 2.5rem;
       gap: 1.5rem;
 
       &::-webkit-scrollbar {
@@ -384,6 +384,71 @@ body {
       .fourthCard {
         background-color: #fff2f3;
         box-shadow: 0 40px 20px #fff5f4cb;
+      }
+    }
+
+    .quick-access-root {
+      h1 {
+        color: #4e449a;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
+
+      .quick-access-card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @media screen and (min-width: $breakpoint-small) {
+          grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (min-width: $breakpoint-xLarge) {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      .quick-access-card {
+        .img-container {
+          height: 130px;
+          overflow: hidden;
+
+          @media screen and (min-width: $breakpoint-small) {
+            height: 120px;
+          }
+          @media screen and (min-width: $breakpoint-large) {
+            height: 100px;
+          }
+
+          @media screen and (min-width: $breakpoint-2xLarge) {
+            height: 150px;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .card-bottom {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-top: 5px;
+          background-color: rgba(167, 165, 165, 0.159);
+          border-radius: 0 0 20px 20px;
+
+          p {
+            font-size: 1.5rem;
+            margin-right: 0.7rem;
+            color: #269e4a;
+          }
+
+          h5 {
+            font-size: 0.8rem;
+            color: rgba(0, 0, 0, 0.89);
+            span {
+              color: rgba(0, 0, 0, 0.393);
+            }
+          }
+        }
       }
     }
   }
