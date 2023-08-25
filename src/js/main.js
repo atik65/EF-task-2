@@ -87,3 +87,31 @@ new Chart(ctx, {
     },
   },
 });
+
+// mobile menu
+
+const bar2 = document.getElementById("bar-2");
+const bar1 = document.getElementById("bar-1");
+const close = document.getElementById("close-btn");
+const mobileNav = document.getElementById("mobile-nav");
+
+let isOpen = false;
+
+const handleNav = () => {
+  isOpen = !isOpen;
+
+  if (isOpen) {
+    mobileNav.classList.add("show-mobile-nav");
+  } else {
+    mobileNav.classList.remove("show-mobile-nav");
+  }
+};
+
+bar1.addEventListener("click", handleNav);
+
+bar2.addEventListener("click", handleNav);
+
+close.addEventListener("click", () => {
+  isOpen = false;
+  mobileNav.classList.remove("show-mobile-nav");
+});
