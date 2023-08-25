@@ -2,7 +2,8 @@ import "../styles/style.scss";
 
 // enabling horizontal scrolling using the mouse wheel (scrolling left or right) in top cards container
 
-const container = document.querySelector(".top-cards-container");
+const container = document.getElementById("top-cards-container");
+
 container.addEventListener("wheel", (event) => {
   if (event.deltaY !== 0) {
     event.preventDefault();
@@ -17,7 +18,7 @@ const adjustWidth = () => {
   let containerWidth;
 
   if (screenWidth > 0 && screenWidth < 576) {
-    containerWidth = screenWidth - 30;
+    containerWidth = screenWidth - 50;
   } else if (screenWidth > 576 && screenWidth < 768) {
     containerWidth = screenWidth - 50;
   } else if (screenWidth > 768 && screenWidth < 992) {
@@ -35,6 +36,8 @@ const adjustWidth = () => {
 };
 
 adjustWidth();
+
+document.addEventListener("DOMContentLoaded", adjustWidth);
 
 window.addEventListener("resize", adjustWidth);
 

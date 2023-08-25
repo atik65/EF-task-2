@@ -27,6 +27,7 @@ body {
     grid-gap: 1rem;
     column-gap: 2rem;
     padding: 0 1rem;
+    max-width: 100vw;
 
     @media screen and (min-width: $breakpoint-small) {
       padding: 0 1.5rem;
@@ -239,7 +240,7 @@ body {
     }
 
     .middle-col {
-      // padding-right: 10px;
+      width: 100%;
 
       @media screen and (min-width: $breakpoint-medium) {
         padding-right: 0;
@@ -349,14 +350,11 @@ body {
         overflow-x: scroll;
         padding-bottom: 2rem;
         gap: 1.5rem;
+        width: 100%;
 
         &::-webkit-scrollbar {
           height: 0;
         }
-
-        // @media screen and (min-width: $breakpoint-large) {
-        //   width: 95%;
-        // }
 
         .top-card {
           flex-shrink: 0;
@@ -402,20 +400,20 @@ body {
 
         .firstCard {
           background-color: #f4f3ff;
-          box-shadow: 0 40px 20px #f6f5ffc5;
+          box-shadow: 0 30px 20px #f6f5ffc5;
         }
 
         .secondCard {
           background-color: #eefffa;
-          box-shadow: 0 40px 20px #f5fffccd;
+          box-shadow: 0 30px 20px #f5fffccd;
         }
         .thirdCard {
           background-color: #fff6ea;
-          box-shadow: 0 40px 20px #fff9f1a4;
+          box-shadow: 0 30px 20px #fff9f1a4;
         }
         .fourthCard {
           background-color: #fff2f3;
-          box-shadow: 0 40px 20px #fff5f4cb;
+          box-shadow: 0 30px 20px #fff5f4cb;
         }
       }
 

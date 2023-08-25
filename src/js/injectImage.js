@@ -10,6 +10,7 @@ import recentlyUpload2 from "../assets/images/recentlyUpload/image-3.png";
 import recentlyUpload3 from "../assets/images/recentlyUpload/image-4.png";
 import recentlyUpload4 from "../assets/images/recentlyUpload/image-5.png";
 import bottomBanner from "../assets/images/bottomBanner.png";
+import faviconImage from "../assets/images/logo.png";
 
 const design = document.getElementById("top-card-design");
 const documents = document.getElementById("top-card-documents");
@@ -24,6 +25,7 @@ const recentlyUploadImage3 = document.getElementById("ru-3");
 const recentlyUploadImage4 = document.getElementById("ru-4");
 const recentlyUploadImage5 = document.getElementById("ru-5");
 const bottomBannerImage = document.getElementById("bottom-banner");
+const favicon = document.getElementById("title-logo");
 
 design.setAttribute("src", designLogo);
 documents.setAttribute("src", documentsLogo);
@@ -38,3 +40,4 @@ recentlyUploadImage3.setAttribute("src", recentlyUpload3);
 recentlyUploadImage4.setAttribute("src", recentlyUpload4);
 recentlyUploadImage5.setAttribute("src", recentlyUpload1);
 bottomBannerImage.setAttribute("src", bottomBanner);
+favicon.setAttribute("href", faviconImage);
